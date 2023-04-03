@@ -32,3 +32,4 @@ override.tf.json
 *.tfvars
 vars.tf
 
+*.hcl
