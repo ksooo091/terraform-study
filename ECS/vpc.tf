@@ -18,3 +18,6 @@ resource "aws_internet_gateway" "ecs_igw" {
         Name = "ECS-IGW"
     }
 }
+
+
+
