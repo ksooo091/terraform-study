@@ -1,9 +1,10 @@
 resource "local_file" "abc" {
-  content  = "abc"
-  filename = "${path.module}/abc.txt"
+  count = 2
+  content  = count.index
+  filename = "${path.module}/abc${count.index}.txt"
 }
-resource "local_file" "def" {
-  content = local_file.abc.content
-  filename = "${path.module}/def.txt"
+# resource "local_file" "def" {
+#   content = local_file.abc.content
+#   filename = "${path.module}/def.txt"
   
-}
+# }
