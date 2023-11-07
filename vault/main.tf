@@ -10,4 +10,5 @@ data "hcp_vault_secrets_app" "aws_app" {
 
 output "vault" {
   value = data.hcp_vault_secrets_app.aws_app
+  sensitive = true
 }
