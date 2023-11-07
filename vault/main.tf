@@ -9,6 +9,6 @@ data "hcp_vault_secrets_app" "aws_app" {
 # data.hcp-vault-secrets_app.aws_app.secret-name
 
 output "vault" {
-  value = data.hcp_vault_secrets_app.aws_app
-  sensitive = true
+  value = nonesensitive(data.hcp_vault_secrets_app.aws_app)
+
 }
